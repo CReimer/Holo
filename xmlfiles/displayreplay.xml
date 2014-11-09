@@ -32,7 +32,7 @@
     </background>
 
     <backgroundmodeonly>
-        <area x="88%" y="82%" width="{areawidth}*0.105" height="4%" layer="1">
+        <area x="89%" y="82%" width="{areawidth}*0.105" height="4%" layer="1">
            <fill color="{clrMessBack}" />
            <drawellipse x="0" y="0" width="{areaheight}*0.05" height="{areaheight}*0.05" color="{clrTransparent}" quadrant="-2"/>
            <drawellipse x="{areawidth} - {areaheight}*0.05" y="0" width="{areaheight}*0.05" height="{areaheight}*0.05" color="{clrTransparent}" quadrant="-1"/>
@@ -58,11 +58,11 @@
     </rectitle>
 
     <recinfo>
-      <area x="81%" y="82%" width="10%" height="4%" layer="2">
-        <drawimage name="isHD" condition="{isHD}" imagetype="icon" path="hd_off" x="0" y="30%"  width="{areaheight}*0.9" height="90%"/>
-        <drawimage condition="not{isHD}" imagetype="icon" path="hd_off" x="{posx(isHD)}" y="30%"  width="{areaheight}*0.9" height="90%"/>
-        <drawimage name="isWide" condition="{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isHD)}+{width(isHD)}+{areaheight}*0.6" y="30%" width="{areaheight}*1.2" height="120%"/>
-        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isWide)}" valign="center" y="30%" width="{areaheight}*1.2" height="120%"/>
+      <area x="82%" y="82%" width="7%" height="4%" layer="3">
+        <drawimage name="isHD" condition="{isHD}" imagetype="icon" path="hd_off" x="0" valign="center" width="{areaheight}" height="90%"/>
+        <drawimage condition="not{isHD}" imagetype="icon" path="hd_off" x="{posx(isHD)}" valign="center" width="{areaheight}" height="90%"/>
+        <drawimage name="isWide" condition="{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isHD)}+{width(isHD)}+{areaheight}*0.6" valign="center" width="{areaheight}*1.2" height="100%"/>
+        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isWide)}" valign="center" width="{areaheight}" height="100%"/>
       </area>
     </recinfo>
 
@@ -102,7 +102,7 @@
     </cutmarks>
 
     <controlicons>
-      <area x="82%" y="82%" width="16%" height="4%" layer="2">
+      <area x="83%" y="82%" width="16%" height="4%" layer="2">
           <drawimage name="frew" imagetype="icon" path="rew_on" x="{width(frew)}*2+{areaheight}*0.5*2" valign="center"  width="{areaheight}" height="100%"/>
           <drawimage condition="{rewind}" imagetype="icon" path="rew_off" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
           <drawimage condition="{rewind1x}" imagetype="icon" path="rewx1_off" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
@@ -122,7 +122,7 @@
     </controlicons>
 
     <controliconsmodeonly>
-      <area x="82%" y="82%" width="16%" height="4%" layer="2">
+      <area x="83%" y="82%" width="16%" height="4%" layer="2">
           <drawimage name="frew" imagetype="icon" path="rew_on" x="{width(frew)}*2+{areaheight}*0.5*2" valign="center"  width="{areaheight}" height="100%"/>
           <drawimage condition="{rewind}" imagetype="icon" path="rew_off" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>
           <drawimage condition="{rewind1x}" imagetype="icon" path="rewx1_off" x="{posx(frew)}" valign="center" width="{width(frew)}" height="{height(frew)}"/>

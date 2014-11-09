@@ -35,7 +35,7 @@
       <area x="25%" y="82%" width="20%" height="4%" layer="2">
         <drawtext x="0" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText}" text="{channelname}" />
       </area>
-      <area x="0" y="85%" width="20%" height="12%" layer="2">
+      <area x="0" y="{areaheight}*0.865" width="20%" height="9%" layer="2">
         <drawimage cache="true" imagetype="channellogo" path="{channelid}" height="100%" align="center" valign="center" />
       </area>
     </channelinfo>
@@ -53,30 +53,30 @@
     <progressbar>
         <area x="25%" y="90%" width="68%" height="2%" layer="3">
            <drawrectangle x="0" y="0" valign="center" width="{areawidth}" height="{areaheight}*0.1125" color="{clrText2}" />
-           <drawrectangle x="0" y="0" valign="center" width="{areawidth}/{duration}*{elapsed}" height="22%" color="{clrSpacer}" />
+           <drawrectangle x="0" y="0" valign="center" width="{areawidth}/{duration}*{elapsed}-{areaheight}*0.75" height="22%" color="{clrSpacer}" />
            <drawellipse x="{areawidth}/{duration}*{elapsed}-{areaheight}*0.75" y="0" valign="center" width="{areaheight}*0.75" height="{areaheight}*0.75" color="{clrSpacer}" quadrant="0"/>
         </area>
     </progressbar>
 
     <statusinfo>
-      <area x="83%" y="82%" width="10%" height="4%" layer="3">
-        <drawimage name="txt" condition="{hasVT}" imagetype="icon" path="teletext_off" x="{width(txt)}*2+{areaheight}*1.1" valign="center" width="{areaheight}*0.6" height="60%"/>
+      <area x="90%" y="82%" width="15%" height="4%" layer="3">
+        <drawimage name="txt" condition="{hasVT}" imagetype="icon" path="teletext_off" x="0" valign="center" width="{areaheight}*0.6" height="60%"/>
         <drawimage condition="not{hasVT}" imagetype="icon" path="teletext_on" x="{posx(txt)}" valign="center" width="{width(txt)}" height="{height(txt)}"/>
 
-        <drawimage name="dolby" condition="{isDolby}" imagetype="icon" path="dolby_off" x="{posx(txt)}+{width(txt)}+{areaheight}*0.4" y="15%" width="{areaheight}*1.5" height="150%"/>
-        <drawimage condition="not{isDolby}" imagetype="icon" path="dolby_on" x="{posx(dolby)}" y="{posy(dolby)}" width="{width(dolby)}" height="{height(dolby)}"/>
+        <drawimage name="dolby_pic" condition="{isDolby}" imagetype="icon" path="dolby_off" x="{posx(txt)}+{width(txt)}+{areaheight}*0.4" valign="center" width="{areaheight}*1.5" height="100%"/>
+        <drawimage condition="not{isDolby}" imagetype="icon" path="dolby_on" x="{posx(dolby_pic)}" width="{width(dolby_pic)}" height="{height(dolby_pic)}"/>
 
-        <drawimage name="encrypted" condition="{isEncrypted}" imagetype="icon" path="encrypted_off" x="{posx(dolby)}+{width(dolby)}+{areaheight}*2" valign="center" width="{areaheight}*0.5" height="100%"/>
+        <drawimage name="encrypted" condition="{isEncrypted}" imagetype="icon" path="encrypted_off" x="{posx(dolby_pic)}+{width(dolby_pic)}" valign="center" width="{areaheight}*1.5" height="100%"/>
         <drawimage condition="not{isEncrypted}" imagetype="icon" path="encrypted_on" x="{posx(encrypted)}" valign="center" width="{width(encrypted)}" height="{height(encrypted)}"/>
       </area>
     </statusinfo>
 
     <screenresolution>
-      <area x="81%" y="82%" width="10%" height="4%" layer="3">
-        <drawimage name="isHD" condition="{isHD}" imagetype="icon" path="hd_off" x="0" y="30%"  width="{areaheight}*0.9" height="90%"/>
-        <drawimage condition="not{isHD}" imagetype="icon" path="hd_off" x="{posx(isHD)}" y="30%"  width="{areaheight}*0.9" height="90%"/>
-        <drawimage name="isWide" condition="{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isHD)}+{width(isHD)}+{areaheight}*0.6" y="30%" width="{areaheight}*1.2" height="120%"/>
-        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isWide)}" valign="center" y="30%" width="{areaheight}*1.2" height="120%"/>
+      <area x="82%" y="82%" width="7%" height="4%" layer="3">
+        <drawimage name="isHD" condition="{isHD}" imagetype="icon" path="hd_off" x="0" valign="center" width="{areaheight}" height="90%"/>
+        <drawimage condition="not{isHD}" imagetype="icon" path="hd_off" x="{posx(isHD)}" valign="center" width="{areaheight}" height="90%"/>
+        <drawimage name="isWide" condition="{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isHD)}+{width(isHD)}+{areaheight}*0.6" valign="center" width="{areaheight}*1.2" height="100%"/>
+        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isWide)}" valign="center" width="{areaheight}" height="100%"/>
       </area>
     </screenresolution>
 
@@ -88,10 +88,10 @@
 
     <signalquality>
       <area x="60%" y="82%" width="20%" height="4%" layer="2">
-	 <drawtext name="snr" x="0" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText}" text="SNR: " />
-	 <drawtext x="{posx(snr)}+{width(snr)}" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText2}" text="{signalquality} %" />
-	 <drawtext name="str" x="{posx(snr)}+{width(snr)}+{areawidth}*0.4" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText}" text="STR: " />
-	 <drawtext x="{posx(str)}+{width(str)}" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText2}" text="{signalstrength} %" />
+        <drawtext name="snr" x="0" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText}" text="SNR: " />
+        <drawtext x="{posx(snr)}+{width(snr)}" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText2}" text="{signalquality} %" />
+        <drawtext name="str" x="{posx(snr)}+{width(snr)}+{areawidth}*0.4" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText}" text="STR: " />
+        <drawtext x="{posx(str)}+{width(str)}" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText2}" text="{signalstrength} %" />
       </area>
     </signalquality>
 
