@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="34"
-   height="16"
+   width="23.59375"
+   height="12"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="Neues Dokument 1">
+   sodipodi:docname="encrypted_on.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="8"
-     inkscape:cx="23.19298"
-     inkscape:cy="45.981779"
+     inkscape:cx="18.19298"
+     inkscape:cy="43.981779"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,7 +35,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1680"
-     inkscape:window-height="992"
+     inkscape:window-height="988"
      inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1" />
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,11 +55,12 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-374.42856,-724.36218)">
+     transform="translate(-379.42856,-726.36218)">
     <path
        style="fill:#000000;fill-opacity:1;stroke:none"
-       d="M 10.96875 2 C 7.6784957 2 5 4.6886681 5 8 C 5 11.311332 7.6784957 14 10.96875 14 C 13.343902 14 15.355626 12.586229 16.3125 10.5625 L 20.65625 10.5625 L 21.53125 9.6875 L 26.4375 9.6875 L 28.59375 7.53125 L 26.53125 5.46875 L 16.34375 5.46875 C 15.394991 3.4237442 13.359325 2 10.96875 2 z M 10.96875 5.125 L 10.96875 8.125 L 10.96875 11.125 C 8.7763003 11.125 7.0000001 9.7847282 7 8.125 C 6.9999999 6.4652718 8.7763003 5.125 10.96875 5.125 z "
+       d="M 10.96875,2 C 7.6784957,2 5,4.6886681 5,8 c 0,3.311332 2.6784957,6 5.96875,6 2.375152,0 4.386876,-1.413771 5.34375,-3.4375 l 4.34375,0 0.875,-0.875 4.90625,0 2.15625,-2.15625 -2.0625,-2.0625 -10.1875,0 C 15.394991,3.4237442 13.359325,2 10.96875,2 z m 0,3.125 0,3 0,3 c -2.1924497,0 -3.9687499,-1.3402718 -3.96875,-3 -1e-7,-1.6597282 1.7763003,-3 3.96875,-3 z"
        transform="translate(374.42856,724.36218)"
-       id="path2996" />
+       id="path2996"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

@@ -60,23 +60,25 @@
 
     <statusinfo>
       <area x="90%" y="82%" width="15%" height="4%" layer="3">
-        <drawimage name="txt" condition="{hasVT}" imagetype="icon" path="teletext_off" x="0" valign="center" width="{areaheight}*0.6" height="60%"/>
+        <!-- Width is taken from SVG. If you change width here, do the same in the SVG file -->
+        <drawimage name="txt" condition="{hasVT}" imagetype="icon" path="teletext_off" x="0" valign="center" width="{areaheight}*0.6/114*113" height="60%"/>
         <drawimage condition="not{hasVT}" imagetype="icon" path="teletext_on" x="{posx(txt)}" valign="center" width="{width(txt)}" height="{height(txt)}"/>
 
-        <drawimage name="dolby_pic" condition="{isDolby}" imagetype="icon" path="dolby_off" x="{posx(txt)}+{width(txt)}+{areaheight}*0.4" valign="center" width="{areaheight}*1.5" height="100%"/>
-        <drawimage condition="not{isDolby}" imagetype="icon" path="dolby_on" x="{posx(dolby_pic)}" width="{width(dolby_pic)}" height="{height(dolby_pic)}"/>
+        <drawimage name="dolby" condition="{isDolby}" imagetype="icon" path="dolby_off" x="{posx(txt)}+{width(txt)}+{areaheight}*0.4" valign="center" width="{areaheight}*0.6/12*18" height="60%"/>
+        <drawimage condition="not{isDolby}" imagetype="icon" path="dolby_on" x="{posx(dolby)}" valign="center" width="{width(dolby)}" height="{height(dolby)}"/>
 
-        <drawimage name="encrypted" condition="{isEncrypted}" imagetype="icon" path="encrypted_off" x="{posx(dolby_pic)}+{width(dolby_pic)}" valign="center" width="{areaheight}*1.5" height="100%"/>
+        <drawimage name="encrypted" condition="{isEncrypted}" imagetype="icon" path="encrypted_off" x="{posx(dolby)}+{width(dolby)}+{areaheight}*0.4" valign="center" width="{areaheight}*0.6/12*24" height="60%"/>
         <drawimage condition="not{isEncrypted}" imagetype="icon" path="encrypted_on" x="{posx(encrypted)}" valign="center" width="{width(encrypted)}" height="{height(encrypted)}"/>
       </area>
     </statusinfo>
 
     <screenresolution>
       <area x="82%" y="82%" width="7%" height="4%" layer="3">
-        <drawimage name="isHD" condition="{isHD}" imagetype="icon" path="hd_off" x="0" valign="center" width="{areaheight}" height="90%"/>
-        <drawimage condition="not{isHD}" imagetype="icon" path="hd_off" x="{posx(isHD)}" valign="center" width="{areaheight}" height="90%"/>
-        <drawimage name="isWide" condition="{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isHD)}+{width(isHD)}+{areaheight}*0.6" valign="center" width="{areaheight}*1.2" height="100%"/>
-        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isWide)}" valign="center" width="{areaheight}" height="100%"/>
+        <!-- Width is taken from SVG. If you change width here, do the same in the SVG file -->
+        <drawimage name="isHD" condition="{isHD}" imagetype="icon" path="hd_off" x="0" valign="center" width="{areaheight}*0.6/11.66*20.88" height="60%"/>
+        <drawimage condition="not{isHD}" imagetype="icon" path="hd_off" x="{posx(isHD)}" valign="center" width="{width(isHD)}" height="{height(isHD)}"/>
+        <drawimage name="isWide" condition="{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isHD)}+{width(isHD)}+{areaheight}*0.4" valign="center" width="{areaheight}*0.6/12*32" height="60%"/>
+        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isWide)}" valign="center" width="{width(isWide)}" height="{height(isWide)}"/>
       </area>
     </screenresolution>
 

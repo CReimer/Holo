@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="34"
-   height="16"
+   width="18"
+   height="12"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="dolby.svg">
+   sodipodi:docname="dolby_off.svg">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.6568543"
-     inkscape:cx="26.018164"
-     inkscape:cy="54.919835"
+     inkscape:cx="18.018164"
+     inkscape:cy="52.919835"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -35,7 +35,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1680"
-     inkscape:window-height="992"
+     inkscape:window-height="988"
      inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1" />
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,11 +55,12 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-374.42856,-724.36218)">
+     transform="translate(-382.42856,-726.36218)">
     <path
        style="fill:#000000;fill-opacity:1;stroke:none"
-       d="M 8 2 L 8 14 L 26 14 L 26 2 L 8 2 z M 10 4.03125 C 14.05265 4.03125 16 5.15639 16 8 C 16 10.77733 14.05265 12 10 12 L 10 8 L 10 4.03125 z M 24 4.03125 L 24 8 L 24 12 C 19.94735 12 18 10.77732 18 8 C 18 5.15638 19.94736 4.03125 24 4.03125 z "
+       d="M 8,2 8,14 26,14 26,2 8,2 z m 2,2.03125 c 4.05265,0 6,1.12514 6,3.96875 0,2.77733 -1.94735,4 -6,4 l 0,-4 0,-3.96875 z m 14,0 L 24,8 l 0,4 c -4.05265,0 -6,-1.22268 -6,-4 0,-2.84362 1.94736,-3.96875 6,-3.96875 z"
        transform="translate(374.42856,724.36218)"
-       id="rect2994" />
+       id="rect2994"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
