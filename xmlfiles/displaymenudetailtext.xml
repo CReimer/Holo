@@ -1,7 +1,5 @@
 <menudetailedtext x="2%" y="{areaheight}*0.02+{areaheight}*0.04" width="96%" height="88%" fadetime="0">
     <tab name="Tab1" x="0" y="9%" width="100%" height="90%" layer="2" scrollheight="{areaheight}/4">
-      <drawtext name="title" x="0" y="0" font="{regular}" fontsize="4%" width="100%" color="{clrSpacer}" text="{title}" />
-      <drawtext name="short" x="0" y="{posy(title)}+{height(title)}+{areaheight}*0.01" font="{regular}" width="100%" fontsize="4%" color="{clrSpacer}" text="{shorttext}" />
-      <drawtextbox x="0" y="{posy(short)}+{height(short)}+{areaheight}*0.01" width="100%" font="{regular}" fontsize="4%" color="{clrText}" text="{t}" />
+      <drawtextbox x="0" y="0" width="100%" font="{regular}" fontsize="4%" color="{clrText}" text="{text}" />
     </tab>
 </menudetailedtext>
