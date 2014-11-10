@@ -18,7 +18,7 @@
       <!-- Fake colorbuttons -->
       <area x="5%" y="96%" width="90%" height="4%" layer="2">
         <drawimage name="red" x="0" imagetype="icon" path="ButtonRed" width="{areaheight}*0.75" height="{areaheight}*0.75" valign="center" />
-        <drawtext debug="true" x="{posx(red)}+{areaheight}*1.5" y="0" valign="center" font="{regular}" fontsize="75%" color="{clrText2}" text="{tr(jump)}" />
+        <drawtext x="{posx(red)}+{areaheight}*1.5" y="0" valign="center" font="{regular}" fontsize="75%" color="{clrText2}" text="{tr(jump)}" />
 
         <drawimage name="green" x="25%" imagetype="icon" path="ButtonGreen" width="{areaheight}*0.75" height="{areaheight}*0.75" valign="center" />
         <drawtext x="{posx(green)}+{areaheight}*1.5" y="0" valign="center" font="{regular}" fontsize="75%" color="{clrText2}" text="{tr(minus)}" />
