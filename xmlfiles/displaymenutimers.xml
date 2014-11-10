@@ -5,10 +5,10 @@
         <drawrectangle x="0" y="4%" height="{areaheight}*0.0032" width="100%" color="{clrSpacer}" />
         <drawrectangle x="5%" y="96%" height="{areaheight}*0.0016" width="90%" color="{clrText2}" />
         <drawrectangle x="66%" y="5%" height="90%" width="{areaheight}*0.0016" color="{clrText2}" />
-        <drawellipse x="0" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-2"/>
-        <drawellipse x="{areawidth} - {areaheight}*0.008" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-1"/>
-        <drawellipse x="0" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-3"/>
-        <drawellipse x="{areawidth} - {areaheight}*0.008" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-4"/>
+<!--         <drawellipse x="0" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-2"/> -->
+<!--         <drawellipse x="{areawidth} - {areaheight}*0.008" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-1"/> -->
+<!--         <drawellipse x="0" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-3"/> -->
+<!--         <drawellipse x="{areawidth} - {areaheight}*0.008" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-4"/> -->
         <drawrectangle x="68%" y="63%" height="30%" width="30%" color="{clrTransparent}" />
       </area>
     </background>
