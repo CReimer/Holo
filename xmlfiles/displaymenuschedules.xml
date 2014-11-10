@@ -75,7 +75,7 @@
           <area x="66%" y="6%" width="32%" height="3%" layer="3">
             <drawrectangle x="0" y="0" valign="center" width="{areawidth}" height="{areaheight}*0.075" color="{clrText2}" />
             <drawrectangle x="0" y="0" valign="center" width="{areawidth}/{duration}*{elapsed}" height="15%" color="{clrSpacer}" />
-            <drawellipse condition="{running}" x="{areawidth}/{duration}*{elapsed}-{areaheight}*0.05" y="0" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrSpacer}" quadrant="0"/>
+            <drawellipse condition="{running}" x="{areawidth}/{duration}*{elapsed}-{areaheight}*0.5" y="0" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrSpacer}" quadrant="0"/>
           </area>
           <areascroll x="66%" y="9%" width="32%" height="54%" layer="3" mode="forthandback" orientation="vertical" delay="1000" scrollspeed="medium">
             <drawtext name="title" x="0" y="0" font="{regular}" fontsize="6%" width="100%" color="{clrSpacer}" text="{title}" />

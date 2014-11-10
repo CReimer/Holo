@@ -53,7 +53,7 @@
     <progressbar>
         <area x="25%" y="90%" width="68%" height="2%" layer="3">
            <drawrectangle x="0" y="0" valign="center" width="{areawidth}" height="{areaheight}*0.1125" color="{clrText2}" />
-           <drawrectangle x="0" y="0" valign="center" width="{areawidth}/{duration}*{elapsed}-{areaheight}*0.75" height="22%" color="{clrSpacer}" />
+           <drawrectangle x="0" y="0" valign="center" width="{areawidth}/{duration}*{elapsed}" height="22%" color="{clrSpacer}" />
            <drawellipse x="{areawidth}/{duration}*{elapsed}-{areaheight}*0.75" y="0" valign="center" width="{areaheight}*0.75" height="{areaheight}*0.75" color="{clrSpacer}" quadrant="0"/>
         </area>
     </progressbar>
