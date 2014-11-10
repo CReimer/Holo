@@ -1,14 +1,15 @@
-<menuschedules x="0" y="0" width="100%" height="100%" fadetime="0">
+<menuschedules x="0" y="0" width="100%" height="100%" fadetime="0" scaletvx="68%" scaletvy="63%" scaletvwidth="30%" scaletvheight="30%">
     <background>
       <area x="0" y="0" width="100%" height="100%" layer="2">
         <fill color="{clrBack}" />
         <drawrectangle x="0" y="4%" height="{areaheight}*0.0032" width="100%" color="{clrSpacer}" />
         <drawrectangle x="5%" y="96%" height="{areaheight}*0.0016" width="90%" color="{clrText2}" />
         <drawrectangle x="66%" y="5%" height="90%" width="{areaheight}*0.0016" color="{clrText2}" />
-        <drawellipse x="0" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-2"/>
-        <drawellipse x="{areawidth} - {areaheight}*0.008" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-1"/>
-        <drawellipse x="0" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-3"/>
-        <drawellipse x="{areawidth} - {areaheight}*0.008" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-4"/>
+<!--         <drawellipse x="0" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-2"/> -->
+<!--         <drawellipse x="{areawidth} - {areaheight}*0.008" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-1"/> -->
+<!--         <drawellipse x="0" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-3"/> -->
+<!--         <drawellipse x="{areawidth} - {areaheight}*0.008" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-4"/> -->
+        <drawrectangle x="68%" y="63%" height="30%" width="30%" color="{clrTransparent}" />
       </area>
     </background>
 
@@ -76,11 +77,11 @@
             <drawrectangle x="0" y="0" valign="center" width="{areawidth}/{duration}*{elapsed}" height="15%" color="{clrSpacer}" />
             <drawellipse condition="{running}" x="{areawidth}/{duration}*{elapsed}-{areaheight}*0.05" y="0" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5" color="{clrSpacer}" quadrant="0"/>
           </area>
-          <area x="66%" y="9%" width="32%" height="90%" layer="3">
-            <drawtext name="title" x="0" y="0" font="{regular}" fontsize="4%" width="100%" color="{clrSpacer}" text="{title}" />
-            <drawtext name="short" x="0" y="{posy(title)}+{height(title)}+{areaheight}*0.01" font="{regular}" width="100%" fontsize="4%" color="{clrSpacer}" text="{shorttext}" />
-            <drawtextbox x="0" y="{posy(short)}+{height(short)}+{areaheight}*0.01" width="100%" font="{regular}" fontsize="4%" color="{clrText}" text="{description}" />
-          </area>
+          <areascroll x="66%" y="9%" width="32%" height="54%" layer="3" mode="forthandback" orientation="vertical" delay="1000" scrollspeed="medium">
+            <drawtext name="title" x="0" y="0" font="{regular}" fontsize="6%" width="100%" color="{clrSpacer}" text="{title}" />
+            <drawtext name="short" x="0" y="{posy(title)}+{height(title)}+{areaheight}*0.01" font="{regular}" width="100%" fontsize="6%" color="{clrSpacer}" text="{shorttext}" />
+            <drawtextbox x="0" y="{posy(short)}+{height(short)}+{areaheight}*0.01" width="100%" font="{regular}" fontsize="6%" color="{clrText}" text="{description}" />
+          </areascroll>
         </currentelement>
     </menuitems>
 
