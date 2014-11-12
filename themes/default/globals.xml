@@ -6,7 +6,6 @@
     <colors>
       <color name="clrBack">FF333333</color>
       <color name="clrMessBack">FF4D4D4D</color>
-      <color name="clrMessText">FFB3B3B3</color>
       <color name="clrSpacer">FF36ADDA</color>
       <color name="clrText">FFFFFFFF</color>
       <color name="clrText2">FF808080</color>
