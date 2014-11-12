@@ -43,7 +43,7 @@
 
       <area condition="{info}" x="20%" y="69%" width="60%" height="8%" layer="7">
         <drawtext y="1%" align="center" width="100%" font="{regular}" fontsize="45%" color="{clrMessInfo}" text="{tr(info)}" />
-        <drawtext y="51%" align="center" width="100%" font="{regular}" fontsize="45%" color="{clrTextSelected}" text="{text}" />
+        <drawtext y="51%" align="center" width="100%" font="{regular}" fontsize="45%" color="{clrText}" text="{text}" />
         <drawrectangle x="0" y="49%" height="3%" width="100%" color="{clrMessInfo}" />
       </area>
 
