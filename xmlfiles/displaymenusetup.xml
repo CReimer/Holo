@@ -50,7 +50,7 @@
     <scrollbar>
         <area condition="lt({height},1000)" x="98%" y="6%" width="1%" height="88%" layer="2">
             <drawrectangle x="0" y="0" width="20%" height="100%" align="center" color="{clrSpacer}" />
-            <drawrectangle x="0" y="{areaheight}*{smallMenuOffset}/1000" align="center" width="100%" height="{areaheight}*{height}/1000" color="{clrSpacer}" />
+            <drawrectangle x="0" y="{areaheight}*{offset}/1000" align="center" width="100%" height="{areaheight}*{height}/1000" color="{clrSpacer}" />
         </area>
     </scrollbar>
 
