@@ -5,10 +5,6 @@
         <drawrectangle x="0" y="4%" height="{areaheight}*0.0032" width="100%" color="{clrSpacer}" />
         <drawrectangle x="5%" y="96%" height="{areaheight}*0.0016" width="90%" color="{clrText2}" />
         <drawrectangle x="66%" y="5%" height="90%" width="{areaheight}*0.0016" color="{clrText2}" />
-<!--         <drawellipse x="0" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-2"/> -->
-<!--         <drawellipse x="{areawidth} - {areaheight}*0.008" y="0" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-1"/> -->
-<!--         <drawellipse x="0" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-3"/> -->
-<!--         <drawellipse x="{areawidth} - {areaheight}*0.008" y="{areaheight} - {areaheight}*0.008" width="{areaheight}*0.008" height="{areaheight}*0.008" color="{clrTransparent}" quadrant="-4"/> -->
         <drawrectangle x="68%" y="63%" height="30%" width="30%" color="{clrTransparent}" />
       </area>
     </background>
@@ -26,30 +22,34 @@
             </area>
             <!-- datetime and icons -->
             <area condition="not{current}" x="1%" width="62%" layer="3">
-                <drawtext name="spacer_number" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="00" />
-                <drawtext name="spacer_time" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="00:00" />
-                <drawtext name="spacer_date" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="Sam 88" />
+                <drawtext name="spacer_number" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="000" />
 
-                <drawimage condition="{flagactive}" x="{areaheight}*0.2" imagetype="icon" path="timerActive_off" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
-                <drawimage condition="not{flagactive}" x="{areaheight}*0.2" imagetype="icon" path="timerInactive_off" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
-                <drawtext name="number" x="{areaheight}*0.8" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{channelnumber}" />
-                <drawtext name="day" x="{posx(number)}+{width(spacer_number)}+{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{dayname} {day}" />
-                <drawtext name="start" x="{posx(day)}+{width(spacer_date)}+{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{timerstart}" />
-                <drawtext name="stop" x="{posx(start)}+{width(spacer_time)}+{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{timerstop}" />
-                <drawtext x="{posx(stop)}+{width(spacer_time)}+{areaheight}*0.2" width="{areawidth}-{areawidth}*0.34-{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{title}" />
+                <drawimage name="icon" condition="{flagactive}" x="{areaheight}*0.4" imagetype="icon" path="timerActive_off" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
+                <drawimage condition="not{flagactive}" x="{areaheight}*0.4" imagetype="icon" path="timerInactive_off" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
+                <drawtext name="number" x="{posx(icon)}+{width(icon)}+{areaheight}*0.4" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{channelnumber}" />
+
+                <drawtext name="spacer_date" x="{posx(number)}+{width(spacer_number)}+{areaheight}*0.4" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="MDMDFSS" />
+                <drawtext x="{posx(spacer_date)}" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{dayname} {day}" />
+                <drawtext name="start" x="{posx(spacer_date)}+{width(spacer_date)}+{areaheight}*0.4" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{timerstart}" />
+
+                <drawtext name="spacer_time" x="{posx(start)}+{width(spacer_time)}+{areaheight}*0.4" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="00:00" />
+                <drawtext x="{posx(spacer_time)}" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{timerstop}" />
+                <drawtext x="{posx(spacer_time)}+{width(spacer_time)}+{areaheight}*0.4" width="{areawidth}-{areawidth}*0.55" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{title}" />
             </area>
             <area condition="{current}" x="1%" width="62%" layer="3">
-                <drawtext name="spacer_number" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="00" />
-                <drawtext name="spacer_time" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="00:00" />
-                <drawtext name="spacer_date" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="Sam 88" />
+                <drawtext name="spacer_number" x="0" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="000" />
 
-                <drawimage condition="{flagactive}" x="{areaheight}*0.2" imagetype="icon" path="timerActive_on" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
-                <drawimage condition="not{flagactive}" x="{areaheight}*0.2" imagetype="icon" path="timerInactive_on" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
-                <drawtext name="number" x="{areaheight}*0.8" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{channelnumber}" />
-                <drawtext name="day" x="{posx(number)}+{width(spacer_number)}+{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{dayname} {day}" />
-                <drawtext name="start" x="{posx(day)}+{width(spacer_date)}+{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{timerstart}" />
-                <drawtext name="stop" x="{posx(start)}+{width(spacer_time)}+{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{timerstop}" />
-                <drawtext x="{posx(stop)}+{width(spacer_time)}+{areaheight}*0.2" width="{areawidth}-{areawidth}*0.34-{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{title}" />
+                <drawimage name="icon" condition="{flagactive}" x="{areaheight}*0.4" imagetype="icon" path="timerActive_on" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
+                <drawimage condition="not{flagactive}" x="{areaheight}*0.4" imagetype="icon" path="timerInactive_on" width="{areaheight}*0.4" height="{areaheight}*0.4" valign="center" />
+                <drawtext name="number" x="{posx(icon)}+{width(icon)}+{areaheight}*0.4" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{channelnumber}" />
+
+                <drawtext name="spacer_date" x="{posx(number)}+{width(spacer_number)}+{areaheight}*0.4" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="MDMDFSS" />
+                <drawtext x="{posx(spacer_date)}" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{dayname} {day}" />
+                <drawtext name="start" x="{posx(spacer_date)}+{width(spacer_date)}+{areaheight}*0.4" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{timerstart}" />
+
+                <drawtext name="spacer_time" x="{posx(start)}+{width(spacer_time)}+{areaheight}*0.4" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="00:00" />
+                <drawtext x="{posx(spacer_time)}" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{timerstop}" />
+                <drawtext x="{posx(spacer_time)}+{width(spacer_time)}+{areaheight}*0.4" width="{areawidth}-{areawidth}*55" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{title}" />
             </area>
         </listelement>
         <currentelement delay="0" fadetime="0">
