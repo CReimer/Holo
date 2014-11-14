@@ -83,7 +83,7 @@
     </screenresolution>
 
     <channelgroup>
-      <area x="25%" y="83%" width="20%" height="4%" layer="2">
+      <area x="25%" y="82%" width="20%" height="4%" layer="2">
         <drawtext x="0" y="0" valign="center" font="{regular}" fontsize="90%" color="{clrText}" text="{group}" />
       </area>
     </channelgroup>
