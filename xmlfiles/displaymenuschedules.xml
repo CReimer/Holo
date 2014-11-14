@@ -24,7 +24,7 @@
             <area condition="{current}" x="1%" y="0" width="62%" height="50%" layer="2">
                 <drawrectangle x="0" y="0" align="center" valign="center" height="90%" width="100%" color="{clrSpacer}" />
             </area>
-            <area condition="not{separator}++{whatson}++not{current}" x="1%" width="62%" layer="3">
+            <area condition="{whatson}++not{current}++not{separator}" x="1%" width="62%" layer="3">
                 <drawtext name="spacer" x="{areaheight}*0.2" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="Sam 88" />
                 <drawtext x="{areaheight}*0.2" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{day} {printf('%02d', daynumeric)}" />
                 <drawtext name="time" x="{posx(spacer)}+{width(spacer)}+{areaheight}*0.2" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{start}" />
@@ -32,7 +32,7 @@
                 <drawtext name="short" condition="isset{shorttext}" x="{posx(title)}+{width(title)}" y="0" valign="center" width="{posx(rec_icon)}-{posx(short)}" font="{regular}" fontsize="40%" color="{clrSpacer}" text=" ({shorttext})" />
                 <drawimage name="rec_icon" condition="{timerfull}" x="{areawidth}*0.93" imagetype="icon" path="rec_off" width="{areaheight}*0.5" height="{areaheight}*0.5" valign="center" />
             </area>
-            <area condition="not{separator}++{whatson}++{current}" x="1%" width="62%" layer="3">
+            <area condition="{whatson}++{current}" x="1%" width="62%" layer="3">
                 <drawtext name="spacer" x="{areaheight}*0.2" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTransparent}" text="Sam 88" />
                 <drawtext x="{areaheight}*0.2" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{day} {printf('%02d', daynumeric)}" />
                 <drawtext name="time" x="{posx(spacer)}+{width(spacer)}+{areaheight}*0.2" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{start}" />
@@ -40,27 +40,35 @@
                 <drawtext name="short" condition="isset{shorttext}" x="{posx(title)}+{width(title)}" y="0" valign="center" width="{posx(rec_icon)}-{posx(short)}" font="{regular}" fontsize="40%" color="{clrText}" text=" ({shorttext})" />
                 <drawimage name="rec_icon" condition="{timerfull}" x="{areawidth}*0.93" imagetype="icon" path="rec_on" width="{areaheight}*0.5" height="{areaheight}*0.5" valign="center" />
             </area>
+            <area condition="{whatson}++{separator}" x="1%" width="62%" layer="3">
+                <drawtext x="{areaheight}*0.2" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrText2}" text="{title}" />
+            </area>
 
-            <area condition="not{separator}++not{whatson}++not{current}" x="1%" width="62%" layer="3">
+            <area condition="not{whatson}++not{current}++not{separator}" x="1%" width="62%" layer="3">
                 <drawimage condition="{channellogoexists}" name="image" x="0" cache="true" imagetype="channellogo" path="{channelid}" width="10%" valign="center" />
                 <drawtext condition="not{channellogoexists}" x="0" valign="center" fontsize="40%" text="{channelname}" width="10%" font="{regular}" color="{clrText}"/>
                 <drawtext name="title" x="25%" y="0" valign="center" width="{posx(rec_icon)}-{posx(title)}" font="{regular}" fontsize="40%" color="{clrText}" text="{title}" />
                 <drawtext name="short" condition="isset{shorttext}" x="{posx(title)}+{width(title)}" y="0" valign="center" width="{posx(rec_icon)}-{posx(short)}" font="{regular}" fontsize="40%" color="{clrSpacer}" text=" ({shorttext})" />
                 <drawimage name="rec_icon" condition="{timerfull}" x="{areawidth}*0.93" imagetype="icon" path="rec_off" width="{areaheight}*0.5" height="{areaheight}*0.5" valign="center" />
             </area>
-            <area condition="not{separator}++not{whatson}++{current}" x="1%" width="62%" layer="3">
+            <area condition="not{whatson}++{current}" x="1%" width="62%" layer="3">
                 <drawimage condition="{channellogoexists}" name="image" x="0" cache="true" imagetype="channellogo" path="{channelid}" width="10%" valign="center" />
                 <drawtext condition="not{channellogoexists}" x="0" valign="center" fontsize="40%" text="{channelname}" width="10%" font="{regular}" color="{clrTextSelected}" />
                 <drawtext name="title" x="25%" y="0" valign="center" width="{posx(rec_icon)}-{posx(title)}" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{title}" />
                 <drawtext name="short" condition="isset{shorttext}" x="{posx(title)}+{width(title)}" y="0" valign="center" width="{posx(rec_icon)}-{posx(short)}" font="{regular}" fontsize="40%" color="{clrText}" text=" ({shorttext})" />
                 <drawimage name="rec_icon" condition="{timerfull}" x="{areawidth}*0.93" imagetype="icon" path="rec_on" width="{areaheight}*0.5" height="{areaheight}*0.5" valign="center" />
             </area>
-            <area condition="not{separator}++{whatsonnow}++not{current}" x="10%" width="4%" layer="3">
+            <area condition="not{whatson}++{separator}" x="1%" width="62%" layer="3">
+                <drawtext x="25%" y="0" valign="center" font="{regular}" fontsize="40%" color="{clrText2}" text="{title}" />
+            </area>
+
+            <!-- Progressbar -->
+            <area condition="{whatsonnow}++not{current}++not{separator}" x="10%" width="4%" layer="3">
               <drawrectangle x="0" y="0" valign="center" width="100%" height="15%" color="{clrSpacer}" />
               <drawrectangle x="2" y="0" valign="center" width="{areawidth}-4" height="{areaheight}*0.15-4" color="{clrTransparent}" />
               <drawrectangle x="0" y="0" valign="center" width="{areawidth}*0.96*{elapsed}/{duration}" height="15%" color="{clrSpacer}" />
             </area>
-            <area condition="not{separator}++{whatsonnow}++{current}" x="10%" width="4%" layer="3">
+            <area condition="{whatsonnow}++{current}" x="10%" width="4%" layer="3">
               <drawrectangle x="0" y="0" valign="center" width="100%" height="15%" color="{clrText}" />
               <drawrectangle x="2" y="0" valign="center" width="{areawidth}-4" height="{areaheight}*0.15-4" color="{clrTransparent}" />
               <drawrectangle x="0" y="0" valign="center" width="{areawidth}*0.96*{elapsed}/{duration}" height="15%" color="{clrText}" />
