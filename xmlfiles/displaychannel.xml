@@ -101,6 +101,12 @@
     </signalqualityback>
 
     <scrapercontent>
+      <area condition="{isbanner}" x="{areaheight}*0.05" y="{areaheight}*0.05" width="{areaheight}*0.13*{mediawidth}/{mediaheight}" height="13%" layer="2">
+        <drawimage imagetype="image" path="{mediapath}" align="center" valign="center"  width="{areawidth}" height="{areaheight}"/>
+      </area>
+      <area condition="not{isbanner}" x="{areaheight}*0.05" y="{areaheight}*0.05" width="{areaheight}*0.5*{mediawidth}/{mediaheight}" height="50%" layer="2">
+        <drawimage imagetype="image" path="{mediapath}" x="5" y="5" width="{areawidth}-10" height="{areaheight}-10"/>
+      </area>
     </scrapercontent>
 
     <datetime>
