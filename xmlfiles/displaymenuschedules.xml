@@ -45,7 +45,7 @@
             </area>
 
             <area condition="not{whatson}++not{current}++not{separator}" x="1%" width="62%" layer="3">
-                <drawimage condition="{channellogoexists}" name="image" x="0" cache="true" imagetype="channellogo" path="{channelid}" width="10%" valign="center" />
+                <drawimage condition="{channellogoexists}" name="image" x="0" cache="true" imagetype="channellogo" path="{channelid}" width="10%" height="100%" valign="center" />
                 <drawtext condition="not{channellogoexists}" x="0" valign="center" fontsize="40%" text="{channelname}" width="10%" font="{regular}" color="{clrText}"/>
                 <drawtext name="title" x="25%" y="0" valign="center" width="{posx(rec_icon)}-{posx(title)}" font="{regular}" fontsize="40%" color="{clrText}" text="{title}" />
                 <drawtext name="short" condition="isset{shorttext}" x="{posx(title)}+{width(title)}" y="0" valign="center" width="{posx(rec_icon)}-{posx(short)}" font="{regular}" fontsize="40%" color="{clrSpacer}" text=" ({shorttext})" />
