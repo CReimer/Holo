@@ -49,7 +49,7 @@
             </area>
             <area condition="{current}" x="41%" width="59%" layer="3">
                 <drawtext name="channel_text" valign="center" font="{regular}" fontsize="90%" width="100%" color="{clrTextSelected}" text="{label}" />
-            </areascroll>
+            </area>
         </listelement>
         <currentelement delay="50" fadetime="0">
             <area x="0%" y="0%" width="33%" height="50%" layer="3">
