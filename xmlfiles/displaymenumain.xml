@@ -1,13 +1,13 @@
-<menumain x="{areawidth}/100*{smallMenuOffset}" y="{areaheight}/100*{smallMenuOffset}" width="{areawidth}/100*{smallMenuSize}" height="{areaheight}/100*{smallMenuSize}" fadetime="0">
+<menumain x="{areawidth}*{smallMenuOffset}" y="{areaheight}*{smallMenuOffset}" width="{areawidth}*{smallMenuSize}" height="{areaheight}*{smallMenuSize}" fadetime="0">
    <background>
      <area x="0" y="0" width="100%" height="100%" layer="1">
        <fill color="{clrBack}" />
-       <drawrectangle x="0" y="{areaheight}*0.04/{smallMenuSize}*100" height="{areaheight}*0.0032/{smallMenuSize}*100" width="100%" color="{clrSpacer}" />
-       <drawrectangle x="{areawidth}*0.05/{smallMenuSize}*100" y="{areaheight}-{areaheight}*0.04/{smallMenuSize}*100" height="{areaheight}*0.0016/{smallMenuSize}*100" width="{areawidth}-{areawidth}*0.1/{smallMenuSize}*100" color="{clrText2}" />
-       <drawellipse x="0" y="0" width="{areaheight}*0.008/{smallMenuSize}*100" height="{areaheight}*0.008/{smallMenuSize}*100" color="{clrTransparent}" quadrant="-2"/>
-       <drawellipse x="{areawidth} - {areaheight}*0.008/{smallMenuSize}*100" y="0" width="{areaheight}*0.008/{smallMenuSize}*100" height="{areaheight}*0.008/{smallMenuSize}*100" color="{clrTransparent}" quadrant="-1"/>
-       <drawellipse x="0" y="{areaheight} - {areaheight}*0.008/{smallMenuSize}*100" width="{areaheight}*0.008/{smallMenuSize}*100" height="{areaheight}*0.008/{smallMenuSize}*100" color="{clrTransparent}" quadrant="-3"/>
-       <drawellipse x="{areawidth} - {areaheight}*0.008/{smallMenuSize}*100" y="{areaheight} - {areaheight}*0.008/{smallMenuSize}*100" width="{areaheight}*0.008/{smallMenuSize}*100" height="{areaheight}*0.008/{smallMenuSize}*100" color="{clrTransparent}" quadrant="-4"/>
+       <drawrectangle x="0" y="{areaheight}*0.04/{smallMenuSize}" height="{areaheight}*0.0032/{smallMenuSize}" width="100%" color="{clrSpacer}" />
+       <drawrectangle x="{areawidth}*0.05/{smallMenuSize}" y="{areaheight}-{areaheight}*0.04/{smallMenuSize}" height="{areaheight}*0.0016/{smallMenuSize}" width="{areawidth}-{areawidth}*0.1/{smallMenuSize}" color="{clrText2}" />
+       <drawellipse x="0" y="0" width="{areaheight}*0.008/{smallMenuSize}" height="{areaheight}*0.008/{smallMenuSize}" color="{clrTransparent}" quadrant="-2"/>
+       <drawellipse x="{areawidth} - {areaheight}*0.008/{smallMenuSize}" y="0" width="{areaheight}*0.008/{smallMenuSize}" height="{areaheight}*0.008/{smallMenuSize}" color="{clrTransparent}" quadrant="-1"/>
+       <drawellipse x="0" y="{areaheight} - {areaheight}*0.008/{smallMenuSize}" width="{areaheight}*0.008/{smallMenuSize}" height="{areaheight}*0.008/{smallMenuSize}" color="{clrTransparent}" quadrant="-3"/>
+       <drawellipse x="{areawidth} - {areaheight}*0.008/{smallMenuSize}" y="{areaheight} - {areaheight}*0.008/{smallMenuSize}" width="{areaheight}*0.008/{smallMenuSize}" height="{areaheight}*0.008/{smallMenuSize}" color="{clrTransparent}" quadrant="-4"/>
      </area>
    </background>
 
@@ -66,7 +66,7 @@
     </scrollbar>
 
    <colorbuttons>
-      <area x="{areawidth}*0.05/{smallMenuSize}*100" y="{areaheight}-{areaheight}*0.04/{smallMenuSize}*100" width="{areawidth}-{areawidth}*0.1/{smallMenuSize}*100" height="{areaheight}*0.04/{smallMenuSize}*100" layer="2">
+      <area x="{areawidth}*0.05/{smallMenuSize}" y="{areaheight}-{areaheight}*0.04/{smallMenuSize}" width="{areawidth}-{areawidth}*0.1/{smallMenuSize}" height="{areaheight}*0.04/{smallMenuSize}" layer="2">
         <drawimage x="0" imagetype="icon" path="ButtonNone" width="{areaheight}*0.75" height="{areaheight}*0.75" valign="center" />
         <drawimage x="25%" imagetype="icon" path="ButtonNone" width="{areaheight}*0.75" height="{areaheight}*0.75" valign="center" />
         <drawimage x="50%" imagetype="icon" path="ButtonNone" width="{areaheight}*0.75" height="{areaheight}*0.75" valign="center" />

@@ -19,8 +19,8 @@
     </colors>
 
     <variables>
-      <var type="int" name="smallMenuSize">76</var>
-      <var type="int" name="smallMenuOffset">12</var>
+      <var type="double" name="smallMenuSize">0.76</var>
+      <var type="double" name="smallMenuOffset">0.12</var>
     </variables>
 
     &translations;
