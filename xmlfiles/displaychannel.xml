@@ -76,9 +76,9 @@
       <area x="82%" y="82%" width="7%" height="4%" layer="3">
         <!-- Width is taken from SVG. If you change width here, do the same in the SVG file -->
         <drawimage name="isHD" condition="{isHD}" imagetype="icon" path="hd_off" x="0" valign="center" width="{areaheight}*0.6/11.66*20.88" height="60%"/>
-        <drawimage condition="not{isHD}" imagetype="icon" path="hd_off" x="{posx(isHD)}" valign="center" width="{width(isHD)}" height="{height(isHD)}"/>
+        <drawimage condition="not{isHD}" imagetype="icon" path="hd_on" x="{posx(isHD)}" valign="center" width="{width(isHD)}" height="{height(isHD)}"/>
         <drawimage name="isWide" condition="{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isHD)}+{width(isHD)}+{areaheight}*0.4" valign="center" width="{areaheight}*0.6/12*32" height="60%"/>
-        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_off" x="{posx(isWide)}" valign="center" width="{width(isWide)}" height="{height(isWide)}"/>
+        <drawimage condition="not{isWideScreen}" imagetype="icon" path="format_on" x="{posx(isWide)}" valign="center" width="{width(isWide)}" height="{height(isWide)}"/>
       </area>
     </screenresolution>
 
