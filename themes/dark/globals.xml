@@ -21,6 +21,8 @@
     <variables>
       <var type="double" name="smallMenuSize">0.76</var>
       <var type="double" name="smallMenuOffset">0.12</var>
+      <var type="int" name="smallMenuItems">10</var>
+      <var type="int" name="bigMenuItems">15</var>
     </variables>
 
     &translations;

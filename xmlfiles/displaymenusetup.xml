@@ -18,7 +18,7 @@
        </area>
     </header>
 
-   <menuitems x="0" y="10%" orientation="vertical" width="100%" height="80%" align="center" numlistelements="9">
+   <menuitems x="0" y="10%" orientation="vertical" width="100%" height="80%" align="center" numlistelements="{smallMenuItems}">
         <listelement>
             <!-- Background -->
             <area x="33%" y="0" width="64%" height="100%" layer="2">

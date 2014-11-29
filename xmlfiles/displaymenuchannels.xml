@@ -23,7 +23,7 @@
         </area>
     </datetime>
 
-    <menuitems x="1%" y="6%" orientation="vertical" width="98%" height="88%" align="center" numlistelements="10">
+    <menuitems x="1%" y="6%" orientation="vertical" width="98%" height="88%" align="center" numlistelements="{bigMenuItems}">
 
         <listelement>
             <!-- Background -->
@@ -31,22 +31,22 @@
                 <fill condition="{current}" color="{clrSpacer}" />
             </area>
             <area condition="not{current}++not{separator}" x="0" width="11%" layer="3">
-                <drawtext x="0" valign="center" font="{regular}" align="right" fontsize="50%" color="{clrText}" text="{number}  " />
+                <drawtext x="0" valign="center" font="{regular}" align="right" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{number}  " />
             </area>
             <area condition="{current}" x="0" width="11%" layer="3">
-                <drawtext x="0" valign="center" font="{regular}" align="right" fontsize="50%" color="{clrTextSelected}" text="{number}  " />
+                <drawtext x="0" valign="center" font="{regular}" align="right" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{number}  " />
             </area>
 
             <area condition="not{current}++not{separator}" x="11%" width="86%" layer="3">
-                <drawtext name="channel_text" valign="center" font="{regular}" fontsize="50%" color="{clrText}" text="{name} " />
-                <drawtext condition="isset{presenteventtitle}" x="{width(channel_text)}" valign="center" font="{regular}" fontsize="50%" width="{areawidth}-{width(channel_text)}" color="{clrSpacer}" text="({presenteventtitle})" />
+                <drawtext name="channel_text" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{name} " />
+                <drawtext condition="isset{presenteventtitle}" x="{width(channel_text)}" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" width="{areawidth}-{width(channel_text)}" color="{clrSpacer}" text="({presenteventtitle})" />
             </area>
             <area condition="{current}" x="11%" width="86%" layer="3">
-                <drawtext name="channel_text" valign="center" font="{regular}" fontsize="50%" color="{clrTextSelected}" text="{name} " />
-                <drawtext condition="isset{presenteventtitle}" x="{width(channel_text)}" valign="center" font="{regular}" fontsize="50%" width="{areawidth}-{width(channel_text)}" color="{clrText}" text="({presenteventtitle})" />
+                <drawtext name="channel_text" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{name} " />
+                <drawtext condition="isset{presenteventtitle}" x="{width(channel_text)}" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" width="{areawidth}-{width(channel_text)}" color="{clrText}" text="({presenteventtitle})" />
             </area>
             <area condition="{separator}" x="11%" width="86%" layer="3">
-                <drawtext name="channel_text" valign="center" font="{regular}" fontsize="50%" color="{clrText2}" text="{name} " />
+                <drawtext name="channel_text" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText2}" text="{name} " />
             </area>
         </listelement>
 

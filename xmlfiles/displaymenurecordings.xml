@@ -19,7 +19,7 @@
         </area>
     </header>
 
-    <menuitems x="{areaheight}*0.02" y="{areaheight}*0.02+{areaheight}*0.04" orientation="vertical" width="100%" height="88%" align="center" numlistelements="10">
+    <menuitems x="{areaheight}*0.02" y="{areaheight}*0.02+{areaheight}*0.04" orientation="vertical" width="100%" height="88%" align="center" numlistelements="{bigMenuItems}">
 
         <listelement>
             <area condition="{current}" x="1%" y="0" width="62%" height="50%" layer="2">
@@ -27,31 +27,31 @@
             </area>
 
             <area condition="not{current}" x="1%" width="62%" layer="3">
-                <drawtext name="date" x="{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{printf('%02d.%02d.%d', daynumeric, month, year)}" />
+                <drawtext name="date" x="{areaheight}*0.2" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{printf('%02d.%02d.%d', daynumeric, month, year)}" />
 
-                <drawtext condition="not{folder}" name="time" x="{posx(date)}+{width(date)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{time}" />
-                <drawtext condition="not{folder}" name="duration" x="{posx(time)}+{width(time)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{durationhours}:{durationminutes}" />
-                <drawtext condition="{folder}" name="numrecordings" x="{posx(time)}" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{numrecordingsfolder}" />
-                <drawtext condition="{folder}" name="newrecordings" x="{posx(duration)}" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{newrecordingsfolder}" />
+                <drawtext condition="not{folder}" name="time" x="{posx(date)}+{width(date)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{time}" />
+                <drawtext condition="not{folder}" name="duration" x="{posx(time)}+{width(time)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{durationhours}:{durationminutes}" />
+                <drawtext condition="{folder}" name="numrecordings" x="{posx(time)}" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{numrecordingsfolder}" />
+                <drawtext condition="{folder}" name="newrecordings" x="{posx(duration)}" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{newrecordingsfolder}" />
 
-                <drawimage condition="{new}++not{folder}++not{cutted}" imagetype="icon" path="newrecording_off" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.4" height="{areaheight}*0.4" />
-                <drawimage condition="{cutted}++not{folder}" imagetype="icon" path="cut_off" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.4" height="{areaheight}*0.4" />
-                <drawimage condition="{folder}" imagetype="icon" path="folder_off" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.4" height="{areaheight}*0.4" />
-                <drawtext x="{posx(duration)}+{width(duration)}+{areaheight}*1.4" valign="center" font="{regular}" fontsize="40%" color="{clrText}" text="{name}" />
+                <drawimage condition="{new}++not{folder}++not{cutted}" imagetype="icon" path="newrecording_off" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.35*{bigMenuItems}/10" height="{areaheight}*0.35*{bigMenuItems}/10" />
+                <drawimage condition="{cutted}++not{folder}" imagetype="icon" path="cut_off" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.35*{bigMenuItems}/10" height="{areaheight}*0.35*{bigMenuItems}/10" />
+                <drawimage condition="{folder}" imagetype="icon" path="folder_off" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.35*{bigMenuItems}/10" height="{areaheight}*0.35*{bigMenuItems}/10" />
+                <drawtext x="{posx(duration)}+{width(duration)}+{areaheight}*1.4" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrText}" text="{name}" />
             </area>
 
             <area condition="{current}" x="1%" width="62%" layer="3">
-                <drawtext name="date" x="{areaheight}*0.2" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{printf('%02d.%02d.%d', daynumeric, month, year)}" />
+                <drawtext name="date" x="{areaheight}*0.2" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{printf('%02d.%02d.%d', daynumeric, month, year)}" />
 
-                <drawtext condition="not{folder}" name="time" x="{posx(date)}+{width(date)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{time}" />
-                <drawtext condition="not{folder}" name="duration" x="{posx(time)}+{width(time)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{durationhours}:{durationminutes}" />
-                <drawtext condition="{folder}" name="numrecordings" x="{posx(time)}" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{numrecordingsfolder}" />
-                <drawtext condition="{folder}" name="newrecordings" x="{posx(duration)}" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{newrecordingsfolder}" />
+                <drawtext condition="not{folder}" name="time" x="{posx(date)}+{width(date)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{time}" />
+                <drawtext condition="not{folder}" name="duration" x="{posx(time)}+{width(time)}+{areaheight}*0.3" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{durationhours}:{durationminutes}" />
+                <drawtext condition="{folder}" name="numrecordings" x="{posx(time)}" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{numrecordingsfolder}" />
+                <drawtext condition="{folder}" name="newrecordings" x="{posx(duration)}" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{newrecordingsfolder}" />
 
-                <drawimage condition="{new}++not{folder}++not{cutted}" imagetype="icon" path="newrecording_on" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.4" height="{areaheight}*0.4" />
-                <drawimage condition="{cutted}++not{folder}" imagetype="icon" path="cut_on" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.4" height="{areaheight}*0.4" />
-                <drawimage condition="{folder}" imagetype="icon" path="folder_on" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.4" height="{areaheight}*0.4" />
-                <drawtext x="{posx(duration)}+{width(duration)}+{areaheight}*1.4" valign="center" font="{regular}" fontsize="40%" color="{clrTextSelected}" text="{name}" />
+                <drawimage condition="{new}++not{folder}++not{cutted}" imagetype="icon" path="newrecording_on" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.35*{bigMenuItems}/10" height="{areaheight}*0.35*{bigMenuItems}/10" />
+                <drawimage condition="{cutted}++not{folder}" imagetype="icon" path="cut_on" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.35*{bigMenuItems}/10" height="{areaheight}*0.35*{bigMenuItems}/10" />
+                <drawimage condition="{folder}" imagetype="icon" path="folder_on" x="{posx(duration)}+{width(duration)}+{areaheight}*0.7" valign="center" width="{areaheight}*0.35*{bigMenuItems}/10" height="{areaheight}*0.35*{bigMenuItems}/10" />
+                <drawtext x="{posx(duration)}+{width(duration)}+{areaheight}*1.4" valign="center" font="{regular}" fontsize="{areaheight}*0.4*{bigMenuItems}/10" color="{clrTextSelected}" text="{name}" />
             </area>
         </listelement>
         <currentelement delay="0" fadetime="0">
