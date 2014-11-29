@@ -59,4 +59,8 @@
         <trans lang="en_EN">Volume</trans>
         <trans lang="de_DE">Lautstärke</trans>
     </token>
+    <token name="tr(status)">
+        <trans lang="en_EN">Status</trans>
+        <trans lang="de_DE">Status</trans>
+    </token>
 </translations>
