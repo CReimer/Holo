@@ -85,7 +85,7 @@
           <drawrectangle x="0" y="0" valign="center" width="{areawidth}/{total}*{current}" height="5%" color="{clrSpacer}" />
         </area>
         <area x="25%" y="{areaheight}*0.865" width="68%" height="9%" layer="4">
-          <drawellipse x="{areawidth}/{total}*{current}-{areaheight}*0.17" y="0" valign="center" width="{areaheight}*0.17" height="{areaheight}*0.17" color="{clrSpacer}" quadrant="0"/>
+          <drawellipse x="{areawidth}/{total}*{current}-{areaheight}*0.17/2" y="0" valign="center" width="{areaheight}*0.17" height="{areaheight}*0.17" color="{clrSpacer}" quadrant="0"/>
         </area>
     </progressbar>
 
@@ -93,12 +93,14 @@
         <area x="25%" y="{areaheight}*0.865" width="68%" height="9%" layer="3">
           <loop name="marks" x="0" y="0" orientation="absolute">
             <drawrectangle condition="{marks[startmark]}" x="{areawidth}/{marks[total]}*{marks[position]}" y="0" valign="center" width="{areawidth}/{marks[total]}*{marks[endposition]}-{areawidth}/{marks[total]}*{marks[position]}" height="5%" color="{clrMark}" />
-            <drawrectangle condition="{marks[startmark]}" x="{areawidth}/{marks[total]}*{marks[position]}-{areaheight}*0.17" y="0" valign="center" width="{areaheight}*0.17" height="5%" color="{clrMark}" />
+<!--            <drawrectangle condition="{marks[startmark]}" x="{areawidth}/{marks[total]}*{marks[position]}-{areaheight}*0.17/2" y="0" valign="center" width="{areaheight}*0.17" height="5%" color="{clrMark}" /> -->
+            <drawellipse condition="{marks[startmark]}" x="{areawidth}/{marks[total]}*{marks[position]}" y="0" valign="center" width="{areaheight}*0.17/2" height="{areaheight}*0.17" color="{clrMark}" quadrant="7"/>
+            <drawellipse condition="not{marks[startmark]}" x="{areawidth}/{marks[total]}*{marks[position]}-{areaheight}*0.17/2" y="0" valign="center" width="{areaheight}*0.17/2" height="{areaheight}*0.17" color="{clrMark}" quadrant="5"/>
           </loop>
         </area>
         <area x="25%" y="{areaheight}*0.865" width="68%" height="9%" layer="5">
           <loop name="marks" x="0" y="0" orientation="absolute">
-            <drawellipse condition="{marks[active]}" x="{areawidth}/{marks[total]}*{marks[position]}-{areaheight}*0.17" y="0" valign="center" width="{areaheight}*0.17" height="{areaheight}*0.17" color="{clrMark}" quadrant="0"/>
+            <drawellipse condition="{marks[active]}" x="{areawidth}/{marks[total]}*{marks[position]}-{areaheight}*0.17/2" y="0" valign="center" width="{areaheight}*0.17" height="{areaheight}*0.17" color="{clrText}" quadrant="0"/>
           </loop>
         </area>
     </cutmarks>
